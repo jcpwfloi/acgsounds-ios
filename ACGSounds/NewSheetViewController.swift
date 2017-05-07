@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-let baseUrl = "http://103.37.150.164:2000/Chardonnay"
+let baseUrl = "http://api.acgsounds.com/Chardonnay"
 var openSingleSheet: Sheet?
 
 class NewSheetViewController: UIViewController {
