@@ -17,7 +17,6 @@
 		8B76760D1EBDA37C00E309D5 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B76760C1EBDA37C00E309D5 /* Sheet.swift */; };
 		8B7676141EBF04A500E309D5 /* SheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7676131EBF04A500E309D5 /* SheetCell.swift */; };
 		8B7676161EBF23B400E309D5 /* SingleSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7676151EBF23B400E309D5 /* SingleSheetViewController.swift */; };
-		8B7676181EBF3C7000E309D5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8B7676171EBF3C7000E309D5 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		8B76760C1EBDA37C00E309D5 /* Sheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sheet.swift; path = models/Sheet.swift; sourceTree = "<group>"; };
 		8B7676131EBF04A500E309D5 /* SheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetCell.swift; sourceTree = "<group>"; };
 		8B7676151EBF23B400E309D5 /* SingleSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSheetViewController.swift; sourceTree = "<group>"; };
-		8B7676171EBF3C7000E309D5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9CEA00222E26B89D566D3ACF /* Pods-ACGSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6C47EADBA63872886BE07C /* Pods-ACGSounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.release.xcconfig"; sourceTree = "<group>"; };
 		CB14926D69DF3550DB5120BE /* Pods_ACGSounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACGSounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +87,6 @@
 				8B76760E1EBDA38200E309D5 /* models */,
 				8B7676131EBF04A500E309D5 /* SheetCell.swift */,
 				8B7676151EBF23B400E309D5 /* SingleSheetViewController.swift */,
-				8B7676171EBF3C7000E309D5 /* README.md */,
 			);
 			path = ACGSounds;
 			sourceTree = "<group>";
@@ -238,7 +235,6 @@
 				8B7676141EBF04A500E309D5 /* SheetCell.swift in Sources */,
 				8B3153591EBD587700FF5647 /* SecondViewController.swift in Sources */,
 				8B7676161EBF23B400E309D5 /* SingleSheetViewController.swift in Sources */,
-				8B7676181EBF3C7000E309D5 /* README.md in Sources */,
 				8B3153551EBD587700FF5647 /* AppDelegate.swift in Sources */,
 				8B3153571EBD587700FF5647 /* NewSheetViewController.swift in Sources */,
 				8B76760D1EBDA37C00E309D5 /* Sheet.swift in Sources */,
