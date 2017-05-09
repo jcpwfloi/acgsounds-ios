@@ -29,7 +29,7 @@ class NewSheetViewController: UIViewController {
         
         Alamofire.request(baseUrl + "/sheet/get", method: .post, parameters: parameters).responseJSON { response in
             if let answer = response.result.value {
-                print("JSON: \(JSON(answer))")
+                //print("JSON: \(JSON(answer))")
                 
                 self.sheetData.removeAll()
                 

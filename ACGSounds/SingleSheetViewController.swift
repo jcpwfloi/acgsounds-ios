@@ -7,13 +7,32 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SingleSheetViewController: UIViewController {
 
+    private var singleSheetData: SingleSheet?
+    
+    func refreshView() {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.title = openSingleSheet?.sheetName
+        
+        let apiUrl: String = baseUrl + "/sheet/get/" + openSingleSheet!._id
+        
+        Alamofire.request(apiUrl, method: .post).responseJSON { response in
+            if let answer = response.result.value {
+                self.singleSheetData = SingleSheet(json: JSON(answer))
+                print(self.singleSheetData!)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

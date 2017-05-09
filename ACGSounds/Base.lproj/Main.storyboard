@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461.5999999999999" y="-321.58920539730138"/>
+            <point key="canvasLocation" x="1490" y="-322"/>
         </scene>
         <!--SheetName-->
         <scene sceneID="OjR-DH-8Vp">
@@ -105,13 +105,25 @@
                     <view key="view" contentMode="scaleToFill" id="g19-mL-AdR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPb-WR-jb6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="SingleSheetSegue"/>
+                        <constraints>
+                            <constraint firstItem="7NR-Q1-B7u" firstAttribute="top" secondItem="XPb-WR-jb6" secondAttribute="bottom" id="2wo-Rw-1OO"/>
+                            <constraint firstItem="XPb-WR-jb6" firstAttribute="leading" secondItem="g19-mL-AdR" secondAttribute="leading" id="8eg-YP-RNG"/>
+                            <constraint firstItem="XPb-WR-jb6" firstAttribute="width" secondItem="g19-mL-AdR" secondAttribute="width" id="RQx-NE-q0a"/>
+                            <constraint firstItem="XPb-WR-jb6" firstAttribute="top" secondItem="WkW-x7-p4k" secondAttribute="bottom" id="x49-bU-mOZ"/>
+                            <constraint firstAttribute="trailing" secondItem="XPb-WR-jb6" secondAttribute="trailing" id="yDb-FO-g5c"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THF-c7-lZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2226" y="-321"/>
+            <point key="canvasLocation" x="2224.8000000000002" y="-321.58920539730138"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -125,17 +137,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hL3-kr-KLx">
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDH-iU-AbQ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="xYr-wa-SKL"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="GxO-lB-uuC" id="PIE-RG-0iZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="GxO-lB-uuC">
+                    <connections>
+                        <outlet property="delegate" destination="8rJ-Kc-sve" id="AwC-eF-eds"/>
+                        <outlet property="searchContentsController" destination="8rJ-Kc-sve" id="56G-fQ-WyF"/>
+                        <outlet property="searchResultsDataSource" destination="8rJ-Kc-sve" id="pUy-9u-S3W"/>
+                        <outlet property="searchResultsDelegate" destination="8rJ-Kc-sve" id="UGj-iC-vl2"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
