@@ -8,9 +8,9 @@ target 'ACGSounds' do
   # Pods for ACGSounds
   source 'https://github.com/CocoaPods/Specs.git'
   platform :ios, '8.0'
-  use_frameworks!
 
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 4.4'
+  pod 'PDFReader'
 
 end

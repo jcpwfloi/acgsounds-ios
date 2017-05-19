@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					8B3153501EBD587700FF5647 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 9X452M9V2E;
+						DevelopmentTeam = ANYWEZ2X23;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -367,12 +367,14 @@
 			baseConfigurationReference = 9CEA00222E26B89D566D3ACF /* Pods-ACGSounds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9X452M9V2E;
+				DEVELOPMENT_TEAM = ANYWEZ2X23;
 				INFOPLIST_FILE = ACGSounds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acgsounds.com.ACGSounds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acgsounds.viewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -381,12 +383,14 @@
 			baseConfigurationReference = AF6C47EADBA63872886BE07C /* Pods-ACGSounds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9X452M9V2E;
+				DEVELOPMENT_TEAM = ANYWEZ2X23;
 				INFOPLIST_FILE = ACGSounds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acgsounds.com.ACGSounds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acgsounds.viewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

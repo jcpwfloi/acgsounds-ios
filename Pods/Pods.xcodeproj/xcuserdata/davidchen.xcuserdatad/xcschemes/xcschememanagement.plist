@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PDFReader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ACGSounds.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6CF7564E9D5F199F55829DCCE0B97769</key>
+		<key>2C471B14EBBFAE1E795DAE58EA4A35B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E37929F2FAFAB01FED1AE663FA16FCA9</key>
+		<key>8FF2D652BB57FE94742D6391DFBF8030</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F710BBECB76266FF75359E63DE720D2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

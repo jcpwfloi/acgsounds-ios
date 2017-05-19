@@ -14,20 +14,24 @@ let baseUrl = "http://api.acgsounds.com/Chardonnay"
 var openSingleSheet: Sheet?
 
 class NewSheetViewController: UIViewController {
-
+    
     @IBOutlet weak var sheetView: UITableView!
     
     var sheetData = [Sheet]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    private func refreshSheets() {
         let parameters: Parameters = [
             "amount": "20",
             "skip": "0"
         ]
         
         Alamofire.request(baseUrl + "/sheet/get", method: .post, parameters: parameters).responseJSON { response in
+            if let error = response.error {
+                print(error)
+                
+                sleep(5)
+                self.refreshSheets()
+            }
             if let answer = response.result.value {
                 //print("JSON: \(JSON(answer))")
                 
@@ -40,6 +44,12 @@ class NewSheetViewController: UIViewController {
                 self.sheetView.reloadData()
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        refreshSheets()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +79,7 @@ extension NewSheetViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         openSingleSheet = self.sheetData[indexPath.row]
+        self.sheetView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "SingleSheetSegue", sender: self)
     }
 }

@@ -16,6 +16,8 @@ struct SingleSheet {
     var createdAt: Date?
     var sheetTag: [String]
     var description: String
+    var midiUrl: String
+    var pdfUrl: String
     init (json: JSON) {
         _id = json["_id"].stringValue
         sheetName = json["sheetName"].stringValue
@@ -25,5 +27,7 @@ struct SingleSheet {
         createdAt = dateFormatter.date(from: json["createdAt"].stringValue)
         sheetTag = json["sheetTag"].arrayObject as! [String]
         description = json["sheetIntro"].stringValue
+        midiUrl = json["midiUrl"].stringValue
+        pdfUrl = json["pdfUrl"].stringValue
     }
 }
