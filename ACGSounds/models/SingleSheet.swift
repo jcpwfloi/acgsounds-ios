@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 struct SingleSheet {
     var sheetName: String
@@ -18,6 +19,7 @@ struct SingleSheet {
     var description: String
     var midiUrl: String
     var pdfUrl: String
+
     init (json: JSON) {
         _id = json["_id"].stringValue
         sheetName = json["sheetName"].stringValue

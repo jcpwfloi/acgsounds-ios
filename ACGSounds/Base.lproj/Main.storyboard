@@ -158,10 +158,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableFooterView" contentMode="redraw" id="StP-Ei-D0b">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="8rJ-Kc-sve" id="kXT-25-YVo"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" id="bae-XP-ZKc">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bae-XP-ZKc" id="j1Z-iJ-Hik">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8rJ-Kc-sve" id="vjf-Sa-kCX"/>
+                            <outlet property="delegate" destination="8rJ-Kc-sve" id="Voq-tA-fWt"/>
+                        </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="search" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="B6s-00-ZFF" id="8B6-8Y-tiw"/>
+                        <outlet property="searchTable" destination="EZ9-qI-AAc" id="wsg-f9-LGg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="B6s-00-ZFF">
+                    <connections>
+                        <outlet property="delegate" destination="8rJ-Kc-sve" id="3ia-43-iVn"/>
+                        <outlet property="searchBar" destination="StP-Ei-D0b" id="sit-F4-oQe"/>
+                        <outlet property="searchContentsController" destination="8rJ-Kc-sve" id="WXe-pS-NVB"/>
+                        <outlet property="searchResultsDataSource" destination="8rJ-Kc-sve" id="Yu7-y0-5gS"/>
+                        <outlet property="searchResultsDelegate" destination="8rJ-Kc-sve" id="SvL-Yp-162"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
