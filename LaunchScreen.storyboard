@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ppE-n1-rfo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ACGSounds-->
+        <scene sceneID="AvY-cF-DSj">
+            <objects>
+                <viewController title="ACGSounds" id="ppE-n1-rfo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d49-0n-uI4"/>
+                        <viewControllerLayoutGuide type="bottom" id="nO7-AB-o1G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qPL-0K-4vg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACGSounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-O0-22k">
+                                <rect key="frame" x="88" y="162" width="201" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project arcGravitus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFY-wY-914">
+                                <rect key="frame" x="114" y="237" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PG7-O0-22k" firstAttribute="leading" secondItem="qPL-0K-4vg" secondAttribute="leadingMargin" constant="72" id="UYg-xk-pi7"/>
+                            <constraint firstItem="LFY-wY-914" firstAttribute="top" secondItem="PG7-O0-22k" secondAttribute="bottom" constant="33" id="Wc0-UP-1Wv"/>
+                            <constraint firstItem="PG7-O0-22k" firstAttribute="top" secondItem="d49-0n-uI4" secondAttribute="bottom" constant="142" id="gbl-xB-8hV"/>
+                            <constraint firstItem="LFY-wY-914" firstAttribute="centerX" secondItem="qPL-0K-4vg" secondAttribute="centerX" id="go4-TV-Isp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2b-Ug-Ys9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="63"/>
+        </scene>
+    </scenes>
+</document>
