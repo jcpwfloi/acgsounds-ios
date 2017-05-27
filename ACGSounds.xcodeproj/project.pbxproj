@@ -19,6 +19,8 @@
 		8BE471FC1ED84BFA006C2D85 /* CardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE471FB1ED84BFA006C2D85 /* CardTableView.swift */; };
 		8BE471FE1ED84C04006C2D85 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE471FD1ED84C04006C2D85 /* CardTableViewCell.swift */; };
 		8BE472001ED858CE006C2D85 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE471FF1ED858CE006C2D85 /* Config.swift */; };
+		8BE472021ED93F40006C2D85 /* SheetDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472011ED93F40006C2D85 /* SheetDetailController.swift */; };
+		8BE472041ED93FDE006C2D85 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472031ED93FDE006C2D85 /* AppNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		8BE471FB1ED84BFA006C2D85 /* CardTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableView.swift; sourceTree = "<group>"; };
 		8BE471FD1ED84C04006C2D85 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		8BE471FF1ED858CE006C2D85 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		8BE472011ED93F40006C2D85 /* SheetDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetDetailController.swift; sourceTree = "<group>"; };
+		8BE472031ED93FDE006C2D85 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		9CEA00222E26B89D566D3ACF /* Pods-ACGSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6C47EADBA63872886BE07C /* Pods-ACGSounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.release.xcconfig"; sourceTree = "<group>"; };
 		CB14926D69DF3550DB5120BE /* Pods_ACGSounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACGSounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,8 @@
 				8BE471FB1ED84BFA006C2D85 /* CardTableView.swift */,
 				8BE471FD1ED84C04006C2D85 /* CardTableViewCell.swift */,
 				8BE471FF1ED858CE006C2D85 /* Config.swift */,
+				8BE472011ED93F40006C2D85 /* SheetDetailController.swift */,
+				8BE472031ED93FDE006C2D85 /* AppNavigationController.swift */,
 			);
 			path = ACGSounds;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE472021ED93F40006C2D85 /* SheetDetailController.swift in Sources */,
 				8BE471FA1ED84B62006C2D85 /* SheetsViewController.swift in Sources */,
 				8BE471FC1ED84BFA006C2D85 /* CardTableView.swift in Sources */,
 				8BB23CC61EC08D54003DFABE /* SingleSheet.swift in Sources */,
@@ -246,6 +253,7 @@
 				8BE472001ED858CE006C2D85 /* Config.swift in Sources */,
 				8B76760D1EBDA37C00E309D5 /* Sheet.swift in Sources */,
 				8BE471FE1ED84C04006C2D85 /* CardTableViewCell.swift in Sources */,
+				8BE472041ED93FDE006C2D85 /* AppNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

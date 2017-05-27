@@ -9,18 +9,18 @@
 import UIKit
 import Material
 
+let firstView = AppToolbarController(rootViewController: SheetsViewController())
+let secondView = AppNavigationController(rootViewController: SheetDetailController())
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
         window = UIWindow(frame: Screen.bounds)
+        window!.rootViewController = firstView
         
-        let sheetsViewController = SheetsViewController()
-        
-        window!.rootViewController = AppToolbarController(rootViewController: sheetsViewController)
         window!.makeKeyAndVisible()
     }
 

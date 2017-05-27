@@ -11,13 +11,13 @@ import Material
 
 class AppToolbarController: ToolbarController {
     fileprivate var menuButton: IconButton!
-    fileprivate var starButton: IconButton!
+    //fileprivate var starButton: IconButton!
     fileprivate var searchButton: IconButton!
     
     open override func prepare() {
         super.prepare()
         prepareMenuButton()
-        prepareStarButton()
+        //prepareStarButton()
         prepareSearchButton()
         prepareStatusBar()
         prepareToolbar()
@@ -30,10 +30,11 @@ extension AppToolbarController {
         menuButton.pulseColor = .white
     }
     
+    /*
     fileprivate func prepareStarButton() {
         starButton = IconButton(image: Icon.cm.star, tintColor: .white)
         starButton.pulseColor = .white
-    }
+    }*/
     
     fileprivate func prepareSearchButton() {
         searchButton = IconButton(image: Icon.cm.search, tintColor: .white)
@@ -57,6 +58,6 @@ extension AppToolbarController {
         toolbar.detailLabel.textAlignment = .left
         
         toolbar.leftViews = [menuButton]
-        toolbar.rightViews = [starButton, searchButton]
+        toolbar.rightViews = [searchButton]
     }
 }

@@ -9,6 +9,8 @@
 import UIKit
 import Material
 
+var sheetDetail: Sheet?
+
 class CardTableView: UITableView {
     internal lazy var heights = [IndexPath: CGFloat]()
     
@@ -60,7 +62,8 @@ extension CardTableView: UITableViewDataSource {
 
 extension CardTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        return
+        sheetDetail = data[indexPath.row]
+        window!.rootViewController = secondView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -14,6 +14,7 @@ struct Sheet {
     var _id: String
     var author: String
     var lastUpdate: Date?
+    var sheetIntro: String
     init (json: JSON) {
         _id = json["_id"].stringValue
         sheetName = json["sheetName"].stringValue
@@ -21,5 +22,6 @@ struct Sheet {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzz'Z'"
         lastUpdate = dateFormatter.date(from: json["lastUpdate"].stringValue)
+        sheetIntro = json["sheetIntro"].stringValue
     }
 }

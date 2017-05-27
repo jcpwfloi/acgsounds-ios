@@ -51,7 +51,7 @@ class CardTableViewCell: TableViewCell {
         toolbar.title = d.sheetName
         toolbar.detail = d.author
         
-        insideView.text = "Introduction Layout Area"
+        insideView.text = d.sheetIntro
         
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
