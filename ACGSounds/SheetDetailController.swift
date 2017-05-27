@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import PDFReader
 
 class SheetDetailController: UIViewController {
     fileprivate var backButton: IconButton!
@@ -19,6 +20,10 @@ class SheetDetailController: UIViewController {
     fileprivate var cardMoreButton: IconButton!
     
     fileprivate var sheetIntro: UILabel!
+    fileprivate var bottomBar: Bar!
+    fileprivate var pdfButton: UIButton!
+    
+    fileprivate var detailedSheet: SingleSheet!
     
     //fileprivate var fabButton: FABButton!
     
@@ -44,20 +49,25 @@ class SheetDetailController: UIViewController {
 
 extension SheetDetailController {
     fileprivate func flush() {
-        navigationItem.title = sheetDetail?.sheetName
-        navigationItem.detail = sheetDetail?.author
+        let detailSheetId = detailedSheet?._id ?? ""
         
-        cardToolbar.title = sheetDetail?.sheetName
-        cardToolbar.detail = sheetDetail?.author
+        if detailSheetId != sheetDetail?._id {
+            navigationItem.title = sheetDetail?.sheetName
+            navigationItem.detail = sheetDetail?.author
         
-        sheetIntro.text = "Loading Sheet Introduction...."
+            cardToolbar.title = sheetDetail?.sheetName
+            cardToolbar.detail = sheetDetail?.author
         
-        getSheetById(sheetDetail!._id) { detailedSheet in
-            self.sheetIntro.text = detailedSheet.description
-            self.detailCard.setNeedsLayout()
-            self.detailCard.layoutIfNeeded()
-            self.detailCard.x = 0
-            self.detailCard.y = 0
+            sheetIntro.text = "Loading Sheet Introduction...."
+        
+            getSheetById(sheetDetail!._id) { detailedSheet in
+                self.detailedSheet = detailedSheet
+                self.sheetIntro.text = detailedSheet.description
+                self.detailCard.setNeedsLayout()
+                self.detailCard.layoutIfNeeded()
+                self.detailCard.x = 0
+                self.detailCard.y = 0
+            }
         }
     }
     
@@ -109,6 +119,7 @@ extension SheetDetailController {
         
         prepareCardToolbar()
         prepareSheetIntro()
+        prepareBottomBar()
         
         detailCard.toolbar = cardToolbar
         detailCard.toolbarEdgeInsetsPreset = .square3
@@ -118,7 +129,22 @@ extension SheetDetailController {
         detailCard.contentView = sheetIntro
         detailCard.contentViewEdgeInsetsPreset = .wideRectangle3
         
+        detailCard.bottomBar = bottomBar
+        detailCard.bottomBarEdgeInsetsPreset = .wideRectangle2
+        
         view.layout(detailCard).top(0).left(0).width(view.width)
+    }
+    
+    fileprivate func prepareBottomBar() {
+        bottomBar = Bar()
+        
+        pdfButton = UIButton()
+        pdfButton.setTitle("Open PDF", for: .normal)
+        pdfButton.setTitleColor(Color.blue.base, for: .normal)
+        pdfButton.titleLabel?.font = RobotoFont.regular(with: 12)
+        pdfButton.addTarget(self, action: #selector(handlePDFButton), for: .touchUpInside)
+        
+        bottomBar.leftViews = [pdfButton]
     }
 }
 
@@ -131,5 +157,14 @@ extension SheetDetailController {
     
     @objc
     fileprivate func handleNextButton() {
+    }
+    
+    @objc
+    fileprivate func handlePDFButton() {
+        let remotePDFDocumentURLPath = detailedSheet.pdfUrl
+        let remotePDFDocumentURL = URL(string: remotePDFDocumentURLPath)!
+        let document = PDFDocument(url: remotePDFDocumentURL)!
+        let readerController = PDFViewController.createNew(with: document)
+        navigationController?.pushViewController(readerController, animated: true)
     }
 }
