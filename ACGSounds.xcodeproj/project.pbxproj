@@ -21,6 +21,7 @@
 		8BE472001ED858CE006C2D85 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE471FF1ED858CE006C2D85 /* Config.swift */; };
 		8BE472021ED93F40006C2D85 /* SheetDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472011ED93F40006C2D85 /* SheetDetailController.swift */; };
 		8BE472041ED93FDE006C2D85 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472031ED93FDE006C2D85 /* AppNavigationController.swift */; };
+		8BE472061ED9690E006C2D85 /* SheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472051ED9690E006C2D85 /* SheetActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		8BE471FF1ED858CE006C2D85 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8BE472011ED93F40006C2D85 /* SheetDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetDetailController.swift; sourceTree = "<group>"; };
 		8BE472031ED93FDE006C2D85 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		8BE472051ED9690E006C2D85 /* SheetActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetActions.swift; sourceTree = "<group>"; };
 		9CEA00222E26B89D566D3ACF /* Pods-ACGSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6C47EADBA63872886BE07C /* Pods-ACGSounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.release.xcconfig"; sourceTree = "<group>"; };
 		CB14926D69DF3550DB5120BE /* Pods_ACGSounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACGSounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 			children = (
 				8B76760C1EBDA37C00E309D5 /* Sheet.swift */,
 				8BB23CC51EC08D54003DFABE /* SingleSheet.swift */,
+				8BE472051ED9690E006C2D85 /* SheetActions.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				8B76760D1EBDA37C00E309D5 /* Sheet.swift in Sources */,
 				8BE471FE1ED84C04006C2D85 /* CardTableViewCell.swift in Sources */,
 				8BE472041ED93FDE006C2D85 /* AppNavigationController.swift in Sources */,
+				8BE472061ED9690E006C2D85 /* SheetActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
