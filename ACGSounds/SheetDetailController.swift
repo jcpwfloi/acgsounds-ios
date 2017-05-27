@@ -56,8 +56,8 @@ extension SheetDetailController {
             self.sheetIntro.text = detailedSheet.description
             self.detailCard.setNeedsLayout()
             self.detailCard.layoutIfNeeded()
-            self.view.setNeedsLayout()
-            self.view.layoutIfNeeded()
+            self.detailCard.x = 0
+            self.detailCard.y = 0
         }
     }
     
@@ -116,7 +116,7 @@ extension SheetDetailController {
         detailCard.toolbarEdgeInsets.right = 8
         
         detailCard.contentView = sheetIntro
-        detailCard.contentViewEdgeInsetsPreset = .wideRectangle2
+        detailCard.contentViewEdgeInsetsPreset = .wideRectangle3
         
         view.layout(detailCard).top(0).left(0).width(view.width)
     }
