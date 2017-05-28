@@ -38,6 +38,7 @@ extension AppToolbarController {
     
     fileprivate func prepareSearchButton() {
         searchButton = IconButton(image: Icon.cm.search, tintColor: .white)
+        searchButton.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
         searchButton.pulseColor = .white
     }
     
@@ -59,5 +60,13 @@ extension AppToolbarController {
         
         toolbar.leftViews = [menuButton]
         toolbar.rightViews = [searchButton]
+    }
+}
+
+extension AppToolbarController {
+    @objc
+    fileprivate func handleSearchButton() {
+        let window = view.window
+        window?.rootViewController = searchView
     }
 }

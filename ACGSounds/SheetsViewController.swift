@@ -8,12 +8,11 @@
 
 import UIKit
 import Material
-import Alamofire
-import SwiftyJSON
 
 class SheetsViewController: UIViewController {
     /// View.
     internal var tableView: CardTableView!
+    internal var indicator = UIActivityIndicatorView()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,6 +27,7 @@ class SheetsViewController: UIViewController {
         view.backgroundColor = Color.blueGrey.lighten5
         
         // Feed.
+        prepareActivityIndicator()
         prepareTableView()
     }
     
@@ -49,25 +49,23 @@ extension SheetsViewController {
         view.layout(tableView).edges()
     }
     
+    internal func prepareActivityIndicator() {
+        self.indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        self.indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        self.indicator.center = self.view.center
+        self.view.addSubview(indicator)
+    }
+    
     internal func reloadData() {
-        let parameters: Parameters = [
-            "amount": "20",
-            "skip": "0"
-        ]
+        // assign value to self.tableView.data
         
-        var sheets = [Sheet]()
+        indicator.startAnimating()
+        indicator.backgroundColor = UIColor.white
         
-        Alamofire.request(baseUrl + "/sheet/get", method: .post, parameters: parameters).responseJSON { response in
-            
-            if let data = response.result.value {
-                sheets.removeAll()
-                
-                for (_, subJson):(String, JSON) in JSON(data) {
-                    sheets.append(Sheet(json: subJson))
-                }
-                
-                self.tableView.data = sheets
-            }
+        getSheetByPage(1) { sheets in
+            self.tableView.data = sheets
+            self.indicator.stopAnimating()
+            self.indicator.hidesWhenStopped = true
         }
     }
 }

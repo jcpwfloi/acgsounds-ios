@@ -22,6 +22,9 @@
 		8BE472021ED93F40006C2D85 /* SheetDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472011ED93F40006C2D85 /* SheetDetailController.swift */; };
 		8BE472041ED93FDE006C2D85 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472031ED93FDE006C2D85 /* AppNavigationController.swift */; };
 		8BE472061ED9690E006C2D85 /* SheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472051ED9690E006C2D85 /* SheetActions.swift */; };
+		8BE472081EDA6F6F006C2D85 /* AppSearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472071EDA6F6F006C2D85 /* AppSearchBarController.swift */; };
+		8BE4720A1EDA6F8F006C2D85 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472091EDA6F8F006C2D85 /* SearchViewController.swift */; };
+		8BE4720C1EDA7004006C2D85 /* SearchSheetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE4720B1EDA7004006C2D85 /* SearchSheetTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		8BE472011ED93F40006C2D85 /* SheetDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetDetailController.swift; sourceTree = "<group>"; };
 		8BE472031ED93FDE006C2D85 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		8BE472051ED9690E006C2D85 /* SheetActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetActions.swift; sourceTree = "<group>"; };
+		8BE472071EDA6F6F006C2D85 /* AppSearchBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchBarController.swift; sourceTree = "<group>"; };
+		8BE472091EDA6F8F006C2D85 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8BE4720B1EDA7004006C2D85 /* SearchSheetTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSheetTableView.swift; sourceTree = "<group>"; };
 		9CEA00222E26B89D566D3ACF /* Pods-ACGSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6C47EADBA63872886BE07C /* Pods-ACGSounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.release.xcconfig"; sourceTree = "<group>"; };
 		CB14926D69DF3550DB5120BE /* Pods_ACGSounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACGSounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +106,9 @@
 				8BE471FF1ED858CE006C2D85 /* Config.swift */,
 				8BE472011ED93F40006C2D85 /* SheetDetailController.swift */,
 				8BE472031ED93FDE006C2D85 /* AppNavigationController.swift */,
+				8BE472071EDA6F6F006C2D85 /* AppSearchBarController.swift */,
+				8BE472091EDA6F8F006C2D85 /* SearchViewController.swift */,
+				8BE4720B1EDA7004006C2D85 /* SearchSheetTableView.swift */,
 			);
 			path = ACGSounds;
 			sourceTree = "<group>";
@@ -252,12 +261,15 @@
 				8BE471FC1ED84BFA006C2D85 /* CardTableView.swift in Sources */,
 				8BB23CC61EC08D54003DFABE /* SingleSheet.swift in Sources */,
 				8BE471F61ED84846006C2D85 /* AppToolBarController.swift in Sources */,
+				8BE4720C1EDA7004006C2D85 /* SearchSheetTableView.swift in Sources */,
 				8B3153551EBD587700FF5647 /* AppDelegate.swift in Sources */,
 				8BE472001ED858CE006C2D85 /* Config.swift in Sources */,
 				8B76760D1EBDA37C00E309D5 /* Sheet.swift in Sources */,
+				8BE4720A1EDA6F8F006C2D85 /* SearchViewController.swift in Sources */,
 				8BE471FE1ED84C04006C2D85 /* CardTableViewCell.swift in Sources */,
 				8BE472041ED93FDE006C2D85 /* AppNavigationController.swift in Sources */,
 				8BE472061ED9690E006C2D85 /* SheetActions.swift in Sources */,
+				8BE472081EDA6F6F006C2D85 /* AppSearchBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

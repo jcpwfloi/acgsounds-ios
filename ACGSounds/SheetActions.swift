@@ -38,3 +38,31 @@ func getSheetByPage(_ page: Int, completionHandler: @escaping (_ sheets: [Sheet]
         }
     }
 }
+
+func searchSheetByKeyword(_ keyword: String, completionHandler: @escaping (_ sheets: [Sheet]) -> Void) {
+    let parameters: Parameters = [
+        "page": "1",
+        "docsPerPage": "10"
+    ]
+    
+    let preflightURL = baseUrl + "/sheet/search/" + keyword
+    let url = preflightURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+    
+    Alamofire.request(url!, method: .post, parameters: parameters).responseJSON { response in
+        if let result = response.result.value {
+            let notCheckedResult = JSON(result)
+            let jsonResult = notCheckedResult["data"]
+            
+            var answer = [Sheet]()
+            
+            for (_, subJSON) in jsonResult {
+                answer.append(Sheet(json: subJSON))
+            }
+            
+            completionHandler(answer)
+        }
+    }
+}
+
+
+

@@ -82,6 +82,7 @@ extension SheetDetailController {
     
     fileprivate func prepareSearchButton() {
         searchButton = IconButton(image: Icon.cm.search)
+        searchButton.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
     }
     
     fileprivate func prepareNavigationItem() {
@@ -157,6 +158,12 @@ extension SheetDetailController {
     
     @objc
     fileprivate func handleNextButton() {
+    }
+    
+    @objc
+    fileprivate func handleSearchButton() {
+        let window = view.window!
+        window.rootViewController = searchView
     }
     
     @objc

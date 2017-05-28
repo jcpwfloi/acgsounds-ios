@@ -11,6 +11,7 @@ import Material
 
 let firstView = AppToolbarController(rootViewController: SheetsViewController())
 let secondView = AppNavigationController(rootViewController: SheetDetailController())
+let searchView = AppSearchBarController(rootViewController: SearchViewController())
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
