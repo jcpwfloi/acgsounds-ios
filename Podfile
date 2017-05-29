@@ -7,10 +7,11 @@ target 'ACGSounds' do
 
   # Pods for ACGSounds
   source 'https://github.com/CocoaPods/Specs.git'
-  platform :ios, '8.0'
+  platform :ios, '9.0'
 
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 4.4'
   pod 'PDFReader'
   pod 'Material', '~> 2.0'
+  pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
 end

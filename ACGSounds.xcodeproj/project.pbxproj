@@ -47,6 +47,7 @@
 		8BE472071EDA6F6F006C2D85 /* AppSearchBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchBarController.swift; sourceTree = "<group>"; };
 		8BE472091EDA6F8F006C2D85 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8BE4720B1EDA7004006C2D85 /* SearchSheetTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSheetTableView.swift; sourceTree = "<group>"; };
+		8BE4720F1EDC1F0C006C2D85 /* bridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridgeHeader.h; sourceTree = "<group>"; };
 		9CEA00222E26B89D566D3ACF /* Pods-ACGSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6C47EADBA63872886BE07C /* Pods-ACGSounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.release.xcconfig"; sourceTree = "<group>"; };
 		CB14926D69DF3550DB5120BE /* Pods_ACGSounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACGSounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +110,7 @@
 				8BE472071EDA6F6F006C2D85 /* AppSearchBarController.swift */,
 				8BE472091EDA6F8F006C2D85 /* SearchViewController.swift */,
 				8BE4720B1EDA7004006C2D85 /* SearchSheetTableView.swift */,
+				8BE4720F1EDC1F0C006C2D85 /* bridgeHeader.h */,
 			);
 			path = ACGSounds;
 			sourceTree = "<group>";
@@ -382,6 +384,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acgsounds.viewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/davidchen/ios/ACGSounds/ACGSounds/bridgeHeader.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -398,6 +401,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acgsounds.viewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/davidchen/ios/ACGSounds/ACGSounds/bridgeHeader.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

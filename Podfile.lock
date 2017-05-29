@@ -5,19 +5,22 @@ PODS:
   - Material/Core (2.6.3)
   - PDFReader (2.4.0)
   - SwiftyJSON (3.1.4)
+  - UIScrollView-InfiniteScroll (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Material (~> 2.0)
   - PDFReader
   - SwiftyJSON
+  - UIScrollView-InfiniteScroll (~> 1.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
   PDFReader: 0bb6be11c8876c6cea2598f0a0ab9b6640a8a018
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  UIScrollView-InfiniteScroll: a90df4ba4a7ca1926128ade34a850ddbdf74c564
 
-PODFILE CHECKSUM: a52e289266bbc399fc9c1fd9bddea8e319737ab0
+PODFILE CHECKSUM: 3f0a9675b1e2b06dbf27f0a3359a8e910491caf0
 
 COCOAPODS: 1.2.1
