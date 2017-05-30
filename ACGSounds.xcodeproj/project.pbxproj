@@ -25,6 +25,10 @@
 		8BE472081EDA6F6F006C2D85 /* AppSearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472071EDA6F6F006C2D85 /* AppSearchBarController.swift */; };
 		8BE4720A1EDA6F8F006C2D85 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472091EDA6F8F006C2D85 /* SearchViewController.swift */; };
 		8BE4720C1EDA7004006C2D85 /* SearchSheetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE4720B1EDA7004006C2D85 /* SearchSheetTableView.swift */; };
+		8BE472111EDD3F96006C2D85 /* SheetDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472101EDD3F96006C2D85 /* SheetDetailTableView.swift */; };
+		8BE472131EDD4593006C2D85 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472121EDD4593006C2D85 /* Comment.swift */; };
+		8BE472151EDD9E0E006C2D85 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472141EDD9E0E006C2D85 /* CommentCell.swift */; };
+		8BE472171EDDB2C5006C2D85 /* SheetDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE472161EDDB2C5006C2D85 /* SheetDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		8BE472091EDA6F8F006C2D85 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8BE4720B1EDA7004006C2D85 /* SearchSheetTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSheetTableView.swift; sourceTree = "<group>"; };
 		8BE4720F1EDC1F0C006C2D85 /* bridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridgeHeader.h; sourceTree = "<group>"; };
+		8BE472101EDD3F96006C2D85 /* SheetDetailTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetDetailTableView.swift; sourceTree = "<group>"; };
+		8BE472121EDD4593006C2D85 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = models/Comment.swift; sourceTree = "<group>"; };
+		8BE472141EDD9E0E006C2D85 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		8BE472161EDDB2C5006C2D85 /* SheetDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetDetailCell.swift; sourceTree = "<group>"; };
 		9CEA00222E26B89D566D3ACF /* Pods-ACGSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6C47EADBA63872886BE07C /* Pods-ACGSounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACGSounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACGSounds/Pods-ACGSounds.release.xcconfig"; sourceTree = "<group>"; };
 		CB14926D69DF3550DB5120BE /* Pods_ACGSounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACGSounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +119,9 @@
 				8BE472091EDA6F8F006C2D85 /* SearchViewController.swift */,
 				8BE4720B1EDA7004006C2D85 /* SearchSheetTableView.swift */,
 				8BE4720F1EDC1F0C006C2D85 /* bridgeHeader.h */,
+				8BE472101EDD3F96006C2D85 /* SheetDetailTableView.swift */,
+				8BE472141EDD9E0E006C2D85 /* CommentCell.swift */,
+				8BE472161EDDB2C5006C2D85 /* SheetDetailCell.swift */,
 			);
 			path = ACGSounds;
 			sourceTree = "<group>";
@@ -121,6 +132,7 @@
 				8B76760C1EBDA37C00E309D5 /* Sheet.swift */,
 				8BB23CC51EC08D54003DFABE /* SingleSheet.swift */,
 				8BE472051ED9690E006C2D85 /* SheetActions.swift */,
+				8BE472121EDD4593006C2D85 /* Comment.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -267,10 +279,14 @@
 				8B3153551EBD587700FF5647 /* AppDelegate.swift in Sources */,
 				8BE472001ED858CE006C2D85 /* Config.swift in Sources */,
 				8B76760D1EBDA37C00E309D5 /* Sheet.swift in Sources */,
+				8BE472151EDD9E0E006C2D85 /* CommentCell.swift in Sources */,
 				8BE4720A1EDA6F8F006C2D85 /* SearchViewController.swift in Sources */,
 				8BE471FE1ED84C04006C2D85 /* CardTableViewCell.swift in Sources */,
+				8BE472131EDD4593006C2D85 /* Comment.swift in Sources */,
 				8BE472041ED93FDE006C2D85 /* AppNavigationController.swift in Sources */,
+				8BE472111EDD3F96006C2D85 /* SheetDetailTableView.swift in Sources */,
 				8BE472061ED9690E006C2D85 /* SheetActions.swift in Sources */,
+				8BE472171EDDB2C5006C2D85 /* SheetDetailCell.swift in Sources */,
 				8BE472081EDA6F6F006C2D85 /* AppSearchBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

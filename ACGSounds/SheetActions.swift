@@ -64,5 +64,26 @@ func searchSheetByKeyword(_ keyword: String, completionHandler: @escaping (_ she
     }
 }
 
+func getCommentsBySheetIdAndPage(_ _id: String, commentPage page: Int, completionHandler: @escaping (_ sheets: [Comment]) -> Void) {
+    let parameters: Parameters = [
+        "page": String(page),
+        "docsPerPage": "10"
+    ]
+    
+    Alamofire.request(baseUrl + "/comment/bySheet/" + _id, method: .post, parameters: parameters).responseJSON { response in
+        if let result = response.result.value {
+            let jsonResult = JSON(result)
+            
+            var answer = [Comment]()
+            
+            for (_, subJSON) in jsonResult {
+                answer.append(Comment(json: subJSON))
+            }
+            
+            completionHandler(answer)
+        }
+    }
+}
+
 
 
