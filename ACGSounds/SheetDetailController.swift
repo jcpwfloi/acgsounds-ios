@@ -9,11 +9,15 @@
 import UIKit
 import Material
 
+var detailedSheet: SingleSheet!
+var sheetNavigation: UINavigationController!
+
 class SheetDetailController: UIViewController {
     internal var tableView: SheetDetailTableView!
     
     fileprivate var backButton: IconButton!
     fileprivate var searchButton: IconButton!
+    private var commentPage: Int = 1
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,20 @@ class SheetDetailController: UIViewController {
         prepareNavigationItem()
         
         tableView = SheetDetailTableView()
+        tableView.addInfiniteScroll { (tableView) -> Void in
+            self.commentPage = self.commentPage + 1
+            getCommentsBySheetIdAndPage(sheetDetail!._id, commentPage: self.commentPage) { comments in
+                var answer = self.tableView.data
+                
+                for comment in comments {
+                    answer.append(comment)
+                }
+                
+                self.tableView.data = answer
+                
+                self.tableView.finishInfiniteScroll()
+            }
+        }
         view.layout(tableView).edges()
     }
     
@@ -31,7 +49,14 @@ class SheetDetailController: UIViewController {
         navigationItem.title = sheetDetail?.sheetName
         navigationItem.detail = sheetDetail?.author
         
+        sheetNavigation = navigationController
+        
+        getSheetById(sheetDetail!._id) { sheet in
+            detailedSheet = sheet
+        }
+        
         getCommentsBySheetIdAndPage(sheetDetail!._id, commentPage: 1) { comments in
+            self.commentPage = 1
             self.tableView.data = comments
         }
     }

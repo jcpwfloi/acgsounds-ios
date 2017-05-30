@@ -35,7 +35,7 @@ class SheetDetailTableView: UITableView {
         separatorStyle = .none
         backgroundColor = nil
         
-        register(CardTableViewCell.self, forCellReuseIdentifier: "CardTableViewCell")
+        register(SheetDetailCell.self, forCellReuseIdentifier: "SheetDetailCell")
         register(CommentCell.self, forCellReuseIdentifier: "CommentCell")
     }
 }
@@ -64,7 +64,7 @@ extension SheetDetailTableView: UITableViewDataSource {
     /// Prepares the cells within the tableView.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CardTableViewCell", for: indexPath) as! CardTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SheetDetailCell", for: indexPath) as! SheetDetailCell
             cell.data = sheetDetail
             cell.isLast = true
             heights[indexPath] = cell.height
